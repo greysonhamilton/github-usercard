@@ -3,7 +3,15 @@
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
+axios.get('https://api.github.com/users/greysonhamilton')
+.then (({data}) => {
+  data.results(info => cardMaker(info))
+})
 
+.catch((err) => {
+  alert('Please check your link.', err);
+
+});
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
@@ -28,7 +36,22 @@
     user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+const followersArray = ["tetondan",
+  "dustinmyers",
+  "justsml",
+  "luishrd",
+  "bigknell"];
+
+for (let i = 0; i < followersArray.length; i++){
+  axios.get(`https://api.github.com/users/${followersArray[i]}`)
+    .then((response) => {
+      let card = document.querySelector(".cards");
+      card.appendChild(cardCreate(response.data));
+    })
+    .catch( err => {
+        alert("This is not the code you're looking for");
+    })
+}
 
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
@@ -49,7 +72,44 @@ const followersArray = [];
       </div>
     </div>
 */
+function cardMaker(info) {
+  const div = document.createElement('div');
+  const img = document.createElement('img');
+  const div2 = document.createElement('div');
+  const h3 = document.createElement('h3');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  const p3 = document.createElement('p');
+  const p4 = document.createElement('p');
+  const p5 = document.createElement('p');
+  const p6 = document.createElement('p');
+  const anchor = document.createElement('a');
+  div.classList.add('card');
+  div2.classList.add('card-info');
+  h3.classList.add('name');
+  p1.classList.add('username');
+  div.appendChild('img');
+  div.appendChild('div2');
+  div2.appendChild('h3');
+  div2.appendChild('p1');
+  div2.appendChild('p2');
+  div2.appendChild('p3');
+  p3.appendChild('a');
+  div2.appendChild('p4');
+  div2.appendChild('p5');
+  div2.appendChild('p6');
+  img.setAttribute = ('src', info.avatar_url);
+  h3.textContent = info.name;
+  p1.textContent = info.login;
+  p2.textContent = 'Location: info.location';
+  p3.textContent = 'Profile: ';
+  p4.textContent = 'Followers: info.followers_url.length';
+  p5.textContent = 'Following: info.following_url.length';
+  p6.textContent = 'Bio: info.bio';
+  anchor.href = anchor.textContent = info.html_url;
 
+  return div; 
+}
 /*
   List of LS Instructors Github username's:
     tetondan
