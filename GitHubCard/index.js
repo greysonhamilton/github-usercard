@@ -3,25 +3,36 @@
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
+
+
 const cards = document.querySelector('.cards');
+
+const followersArray = [
+  "greysonhamilton",
+  "tetondan",
+  "dustinmyers",
+  "justsml",
+  "luishrd",
+  "bigknell"];
 
 followersArray.forEach((login) => {
 
   axios.get(`https://api.github.com/users/${login}`)
 
-  .then ((info) => {
+  .then((info) => {
 
+    console.log(info);
     cards.appendChild(cardMaker(info))
 
   })
 
   .catch((err) => {
 
-    alert('Please check your link.', err);
+    alert("This is not the code you're looking for.", err);
 
   });
 
-}
+});
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
@@ -45,15 +56,6 @@ followersArray.forEach((login) => {
     Using that array, iterate over it, requesting data for each user, creating a new card for each
     user, and adding that card to the DOM.
 */
-
-const followersArray = [
-  "greysonhamilton",
-  "tetondan",
-  "dustinmyers",
-  "justsml",
-  "luishrd",
-  "bigknell"];
-
 
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
@@ -104,13 +106,12 @@ function cardMaker(info) {
   anchor.setAttribute = ('href', info.html_url);
   h3.textContent = info.name;
   p1.textContent = info.login;
-  p2.textContent = 'Location: info.location';
+  p2.textContent = `Location: ${info.location}`;
   p3.textContent = 'Profile: ';
   anchor.textContent = info.html_url;
-  p4.textContent = 'Followers: info.followers_url.length';
-  p5.textContent = 'Following: info.following_url.length';
-  p6.textContent = 'Bio: info.bio';
-  anchor.href = anchor.textContent = info.html_url;
+  p4.textContent = `Followers: ${info.followers_url.length}`;
+  p5.textContent = `Following: ${info.following_url.length}`;
+  p6.textContent = `Bio: ${info.bio}`;
 
   return div; 
 }
