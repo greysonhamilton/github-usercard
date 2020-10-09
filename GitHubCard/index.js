@@ -3,15 +3,25 @@
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
-axios.get('https://api.github.com/users/greysonhamilton')
-.then (({data}) => {
-  data.results(info => cardMaker(info))
-})
+const cards = document.querySelector('.cards');
 
-.catch((err) => {
-  alert('Please check your link.', err);
+followersArray.forEach((login) => {
 
-});
+  axios.get(`https://api.github.com/users/${login}`)
+
+  .then ((info) => {
+
+    cards.appendChild(cardMaker(info))
+
+  })
+
+  .catch((err) => {
+
+    alert('Please check your link.', err);
+
+  });
+
+}
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
@@ -36,22 +46,14 @@ axios.get('https://api.github.com/users/greysonhamilton')
     user, and adding that card to the DOM.
 */
 
-const followersArray = ["tetondan",
+const followersArray = [
+  "greysonhamilton",
+  "tetondan",
   "dustinmyers",
   "justsml",
   "luishrd",
   "bigknell"];
 
-for (let i = 0; i < followersArray.length; i++){
-  axios.get(`https://api.github.com/users/${followersArray[i]}`)
-    .then((response) => {
-      let card = document.querySelector(".cards");
-      card.appendChild(cardCreate(response.data));
-    })
-    .catch( err => {
-        alert("This is not the code you're looking for");
-    })
-}
 
 /*
   STEP 3: Create a function that accepts a single object as its only argument.
@@ -99,10 +101,12 @@ function cardMaker(info) {
   div2.appendChild('p5');
   div2.appendChild('p6');
   img.setAttribute = ('src', info.avatar_url);
+  anchor.setAttribute = ('href', info.html_url);
   h3.textContent = info.name;
   p1.textContent = info.login;
   p2.textContent = 'Location: info.location';
   p3.textContent = 'Profile: ';
+  anchor.textContent = info.html_url;
   p4.textContent = 'Followers: info.followers_url.length';
   p5.textContent = 'Following: info.following_url.length';
   p6.textContent = 'Bio: info.bio';
