@@ -3,76 +3,76 @@
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
-const followersArray = [
-  {
-    avatar_url: "https://avatars3.githubusercontent.com/u/4186993?v=4",
-    bio: "requirements => value;",
-    blog: "",
-    company: "@LambdaSchool ",
-    created_at: "2013-04-18T02:37:15Z",
-    email: null,
-    events_url: "https://api.github.com/users/luishrd/events{/privacy}",
-    followers: 177,
-    followers_url: "https://api.github.com/users/luishrd/followers",
-    following: 7,
-    following_url: "https://api.github.com/users/luishrd/following{/other_user}",
-    gists_url: "https://api.github.com/users/luishrd/gists{/gist_id}",
-    gravatar_id: "",
-    hireable: true,
-    html_url: "https://github.com/luishrd",
-    id: 4186993,
-    location: "Provo, UT",
-    login: "luishrd",
-    name: "Luis Hernandez",
-    node_id: "MDQ6VXNlcjQxODY5OTM=",
-    organizations_url: "https://api.github.com/users/luishrd/orgs",
-    public_gists: 16,
-    public_repos: 3,
-    received_events_url: "https://api.github.com/users/luishrd/received_events",
-    repos_url: "https://api.github.com/users/luishrd/repos",
-    site_admin: false,
-    starred_url: "https://api.github.com/users/luishrd/starred{/owner}{/repo}",
-    subscriptions_url: "https://api.github.com/users/luishrd/subscriptions",
-    twitter_username: null,
-    type: "User",
-    updated_at: "2020-10-06T19:32:30Z",
-    url: "https://api.github.com/users/luishrd"
-  },
-  {
-    avatar_url: "https://avatars3.githubusercontent.com/u/4186993?v=4",
-    bio: "requirements => value;",
-    blog: "",
-    company: "@LambdaSchool ",
-    created_at: "2013-04-18T02:37:15Z",
-    email: null,
-    events_url: "https://api.github.com/users/luishrd/events{/privacy}",
-    followers: 177,
-    followers_url: "https://api.github.com/users/luishrd/followers",
-    following: 7,
-    following_url: "https://api.github.com/users/luishrd/following{/other_user}",
-    gists_url: "https://api.github.com/users/luishrd/gists{/gist_id}",
-    gravatar_id: "",
-    hireable: true,
-    html_url: "https://github.com/luishrd",
-    id: 4186993,
-    location: "Provo, UT",
-    login: "luishrd",
-    name: "Luis Hernandez",
-    node_id: "MDQ6VXNlcjQxODY5OTM=",
-    organizations_url: "https://api.github.com/users/luishrd/orgs",
-    public_gists: 16,
-    public_repos: 3,
-    received_events_url: "https://api.github.com/users/luishrd/received_events",
-    repos_url: "https://api.github.com/users/luishrd/repos",
-    site_admin: false,
-    starred_url: "https://api.github.com/users/luishrd/starred{/owner}{/repo}",
-    subscriptions_url: "https://api.github.com/users/luishrd/subscriptions",
-    twitter_username: null,
-    type: "User",
-    updated_at: "2020-10-06T19:32:30Z",
-    url: "https://api.github.com/users/luishrd"
-  }
-];
+// const followersArray = [
+//   {
+//     avatar_url: "https://avatars3.githubusercontent.com/u/4186993?v=4",
+//     bio: "requirements => value;",
+//     blog: "",
+//     company: "@LambdaSchool ",
+//     created_at: "2013-04-18T02:37:15Z",
+//     email: null,
+//     events_url: "https://api.github.com/users/luishrd/events{/privacy}",
+//     followers: 177,
+//     followers_url: "https://api.github.com/users/luishrd/followers",
+//     following: 7,
+//     following_url: "https://api.github.com/users/luishrd/following{/other_user}",
+//     gists_url: "https://api.github.com/users/luishrd/gists{/gist_id}",
+//     gravatar_id: "",
+//     hireable: true,
+//     html_url: "https://github.com/luishrd",
+//     id: 4186993,
+//     location: "Provo, UT",
+//     login: "luishrd",
+//     name: "Luis Hernandez",
+//     node_id: "MDQ6VXNlcjQxODY5OTM=",
+//     organizations_url: "https://api.github.com/users/luishrd/orgs",
+//     public_gists: 16,
+//     public_repos: 3,
+//     received_events_url: "https://api.github.com/users/luishrd/received_events",
+//     repos_url: "https://api.github.com/users/luishrd/repos",
+//     site_admin: false,
+//     starred_url: "https://api.github.com/users/luishrd/starred{/owner}{/repo}",
+//     subscriptions_url: "https://api.github.com/users/luishrd/subscriptions",
+//     twitter_username: null,
+//     type: "User",
+//     updated_at: "2020-10-06T19:32:30Z",
+//     url: "https://api.github.com/users/luishrd"
+//   },
+//   {
+//     avatar_url: "https://avatars3.githubusercontent.com/u/4186993?v=4",
+//     bio: "requirements => value;",
+//     blog: "",
+//     company: "@LambdaSchool ",
+//     created_at: "2013-04-18T02:37:15Z",
+//     email: null,
+//     events_url: "https://api.github.com/users/luishrd/events{/privacy}",
+//     followers: 177,
+//     followers_url: "https://api.github.com/users/luishrd/followers",
+//     following: 7,
+//     following_url: "https://api.github.com/users/luishrd/following{/other_user}",
+//     gists_url: "https://api.github.com/users/luishrd/gists{/gist_id}",
+//     gravatar_id: "",
+//     hireable: true,
+//     html_url: "https://github.com/luishrd",
+//     id: 4186993,
+//     location: "Provo, UT",
+//     login: "luishrd",
+//     name: "Luis Hernandez",
+//     node_id: "MDQ6VXNlcjQxODY5OTM=",
+//     organizations_url: "https://api.github.com/users/luishrd/orgs",
+//     public_gists: 16,
+//     public_repos: 3,
+//     received_events_url: "https://api.github.com/users/luishrd/received_events",
+//     repos_url: "https://api.github.com/users/luishrd/repos",
+//     site_admin: false,
+//     starred_url: "https://api.github.com/users/luishrd/starred{/owner}{/repo}",
+//     subscriptions_url: "https://api.github.com/users/luishrd/subscriptions",
+//     twitter_username: null,
+//     type: "User",
+//     updated_at: "2020-10-06T19:32:30Z",
+//     url: "https://api.github.com/users/luishrd"
+//   }
+// ];
 
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
@@ -118,6 +118,16 @@ const followersArray = [
     </div>
 */
 
+const cards = document.querySelector('.cards');
+
+const followersArray = [
+  "greysonhamilton",
+  "tetondan",
+  "dustinmyers",
+  "justsml",
+  "luishrd",
+  "bigknell"];
+
 // followersArray.forEach(login => {
 
 //   axios.get(`https://api.github.com/users/${login}`)
@@ -137,21 +147,28 @@ const followersArray = [
 
 // });
 
-const cards = document.querySelector('.cards');
+  for (let i = 0; i < followersArray.length; i++) {
+    
+    axios.get(`https://api.github.com/users/${followersArray[i]}`)
+  
+    .then(info => {
+  
+        console.log(info);
+        cards.appendChild(cardMaker(info.data));
+  
+      })
+  
+    .catch((err) => {
+  
+      alert("This is not the code you're looking for.", err);
+  
+    });
+  
+  };
 
-// const followersArray = [
-//   "greysonhamilton",
-//   "tetondan",
-//   "dustinmyers",
-//   "justsml",
-//   "luishrd",
-//   "bigknell"];
-
-
-followersArray.forEach(login => {
-  cards.appendChild(cardMaker(login));
-});
-
+// followersArray.forEach(login => {
+//   cards.appendChild(cardMaker(login));
+// });
 
 function cardMaker(info) {
   const div = document.createElement('div');
@@ -185,7 +202,7 @@ function cardMaker(info) {
   h3.textContent = info.name;
   p1.textContent = info.login;
   p2.textContent = `Location: ${info.location}`;
-  p3.textContent = 'Profile: ';
+  p3.textContent = `Profile: ${a}`;
   p4.textContent = `Followers: ${info.followers_url.length}`;
   p5.textContent = `Following: ${info.following_url.length}`;
   p6.textContent = `Bio: ${info.bio}`;
