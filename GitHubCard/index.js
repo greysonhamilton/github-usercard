@@ -146,6 +146,7 @@ const followersArray = [
 //   });
 
 // });
+// Note: The forEach method can cause errors when using axios request calls. The 'for' loop, however, seems to work great. As shown below.
 
   for (let i = 0; i < followersArray.length; i++) {
     
@@ -196,13 +197,14 @@ function cardMaker(info) {
   div2.appendChild(p4);
   div2.appendChild(p5);
   div2.appendChild(p6);
-  img.src = info.avatar_url;
+  img.src = `${info.avatar_url}`;
+  // still an issue with the anchor tag not placing within the p3. anchor tag will place within div2 after p3, when line 196 is ammended.
+  a.href = `${info.html_url}`;
   a.textContent = `${info.html_url}`;
-  a.href = info.html_url;
   h3.textContent = info.name;
   p1.textContent = info.login;
   p2.textContent = `Location: ${info.location}`;
-  p3.textContent = `Profile: ${a}`;
+  p3.textContent = `Profile: `;
   p4.textContent = `Followers: ${info.followers_url.length}`;
   p5.textContent = `Following: ${info.following_url.length}`;
   p6.textContent = `Bio: ${info.bio}`;
